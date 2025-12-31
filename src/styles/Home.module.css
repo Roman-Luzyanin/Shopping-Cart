@@ -1,0 +1,446 @@
+.home {
+	max-width: 1366px;
+	overflow: hidden;
+}
+
+.banner {
+	height: 400px;
+	background: no-repeat url(../assets/BG_shopping.jpg) left / cover;
+	position: relative;
+	border-bottom: 1px solid black;
+}
+
+.bannerImg {
+	position: absolute;
+	height: 300px;
+	width: 400px;
+	right: 3%;
+	bottom: 0;
+	background: url(../assets/percent.png) center / contain;
+}
+
+.shopBtn {
+	position: absolute;
+	top: 50%;
+	left: 32%;
+	width: 200px;
+	height: 75px;
+	font-size: 36px;
+	background: transparent;
+	cursor: pointer;
+	border: 2px outset black;
+	border-radius: 5px;
+	font-weight: 900;
+	color: rgba(0,0,0,0.9);
+	text-align: center;
+	line-height: 65px;
+}
+
+.shopBtn:active {
+	border: 2px inset black;
+}
+
+/* --------------------------Running Line--------------------------- */
+.marquee {
+	width: 400%;
+	height: 70px;
+	display: flex;
+	background: url(../assets/bg_inner.jpg) center / 10%, lightgoldenrodyellow;
+	background-blend-mode: overlay;
+}
+
+.track {	
+	width: 200%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+  	animation: scroll 30s linear infinite;
+}
+
+.track img {
+	width: 200px;
+	object-fit: contain;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* -------------------------------------------------------------------------- */
+
+/* ---------------------------------Carousel----------------------------------------- */
+
+.carousel {
+	height: 450px;
+	background: radial-gradient(#F5D302 70%, #EAA001 );
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 30px;
+	border-top: 1px solid #000;
+}
+
+.viewport {
+	overflow: hidden;
+	position: relative;
+	border: 3px solid white;
+	border-radius: 10px;
+	box-sizing: content-box;
+}
+
+.dots {
+	width: 20%;
+	height: 20px;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	transform: translateX(-50%);
+	transition: 0.2s;
+}
+
+.dot {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid gold;
+	cursor: pointer;
+}
+
+.active {
+	background-color: gold;
+}
+
+.testimonial {
+	padding: 40px;
+	height: 350px;
+	background: linear-gradient( #C51A6F, #c51a70ae);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	flex-shrink: 0;
+	/* cursor: pointer; */
+}
+
+.testimonial::before {
+	content: "";
+	width: 20px;
+	height: 300px;
+	border-radius: 20px;
+	background-color: #FF795C;
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	z-index: -1;
+}
+
+.testimonial::after {
+	content: "";
+	width: 20px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #FF795C;
+	position: absolute;
+	top: 20px;
+	left: 80px;
+	z-index: -1;
+}
+
+.image {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: #8528feb7;
+	position: relative;
+	overflow: hidden;
+}
+
+.image img {
+	height: inherit;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.description {
+	width: 370px;
+	position: relative;
+}
+
+.description::before {
+	content: "";
+	width: 40px;
+	height: 40px;
+	background: url(../assets/quotes.png) center / contain;
+	position: absolute;
+	top: -50px;
+	transform: scale(-1, -1);
+}
+
+.description::after {
+	content: "";
+	width: 40px;
+	height: 40px;
+	background: url(../assets/quotes.png) center / contain;
+	position: absolute;
+	bottom: -40px;
+	right: 0;
+	transform: scaleY(-1);
+}
+
+.position {
+	opacity: 0.6;
+}
+
+.title {
+	margin: 10px 0;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.stars {
+	width: 100px;
+	height: 20px;
+	background: no-repeat url(../assets/stars.png) center / contain;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* -------------------------------------------------------------------------------------- */
+
+/* ============================Media Queries================================= */
+
+@media (max-width: 1200px) {
+/* -------------------Running Line---------------------- */
+	.marquee {
+		height: 50px;
+	}
+
+	.track img {
+		width: 150px;
+	}
+}
+
+@media (max-width: 990px) {
+	/* ---------------------Banner--------------------------------- */
+	.banner {
+		height: 300px;
+	}
+
+	.bannerImg {
+		width: 300px;
+		height: 225px;
+	}
+
+	.shopBtn {
+		width: 150px;
+		height: 56px;
+		font-size: 30px;
+		line-height: 50px;
+		left: 33%;
+	}
+
+	/* -------------------Running Line---------------------- */
+	.marquee {
+		height: 40px;
+	}
+
+	.track img {
+		width: 100px;
+	}
+
+}
+
+@media (max-width: 760px) {
+	/* ---------------------Banner--------------------------------- */
+	.banner {
+		height: 200px;
+	}
+
+	.bannerImg {
+		width: 225px;
+		height: 170px;
+	}
+
+	.shopBtn {
+		width: 100px;
+		height: 50px;
+		font-size: 24px;
+		line-height: 45px;
+	}
+
+	/* -------------------Running Line---------------------- */
+	.marquee {
+		height: 30px;
+	}
+
+	.track img {
+		width: 75px;
+	}
+
+	/* ------------------------Carousel---------------------------------- */
+	.carousel {
+		height: 320px;
+	}
+
+	.testimonial {
+		padding: 20px;
+		height: 270px;
+		column-gap: 20px;
+	}
+
+	.testimonial::before {
+		height: 220px;
+		left: 30px;
+		width: 15px;
+	}
+
+	.testimonial::after {
+		height: 30px;
+		left: 60px;
+		width: 15px;
+	}
+
+	.image {
+		width: 150px;
+		height: 150px;
+	}
+
+	.description {
+		width: 320px;
+		line-height: 1.4;
+	}
+
+	.description::before {
+		top: -30px;
+	}
+
+	.description::after {
+		bottom: -35px;
+	}
+	
+	.description::before,
+	.description::after {
+		width: 30px;
+		height: 30px;
+	}
+
+	.position {
+		display: block;
+	}
+
+	.title {
+		margin: 5px 0;
+	}
+
+	.text {
+		display: -webkit-box;
+		overflow: hidden;
+		-webkit-line-clamp: 4;        
+  		-webkit-box-orient: vertical;
+		font-size: 15px;
+	}
+
+	.dots {
+		bottom: 5%;
+	}
+
+}
+
+@media (max-width: 540px) {
+	/* ---------------------Banner--------------------------------- */
+	.banner {
+		height: 150px;
+	}
+
+	.bannerImg {
+		width: 135px;
+		height: 102px;
+		bottom: 5%;
+	}
+
+	.shopBtn {
+		width: 80px;
+		height: 40px;
+		font-size: 20px;
+		line-height: 35px;
+		left: 35%;
+	}
+
+	/* -------------------Running Line---------------------- */
+	.marquee {
+		height: 20px;
+	}
+
+	.track img {
+		width: 50px;
+	}
+
+	/* ------------------------Carousel---------------------------------- */
+	.carousel {
+		height: 350px;
+	}
+
+	.testimonial {
+		flex-direction: column;
+		height: 320px;
+		column-gap: 0;
+		justify-content: flex-start;;
+	}
+
+	.testimonial::before {
+		height: 20px;
+		left: 105px;
+		width: 10px;
+	}
+
+	.testimonial::after {
+		height: 100px;
+		left: 120px;
+		width: 10px;
+	}
+
+	.image {
+		width: 100px;
+		height: 100px;
+	}
+
+	.description {
+		width: 100%; 
+	}
+
+	.title {
+		font-size: 16px;
+	}
+
+	.name,
+	.position,
+	.text {
+		font-size: 13px; 
+	}
+}
+
+@media (max-width: 400px) {
+	/* ---------------------Banner--------------------------------- */
+	.bannerImg {
+		width: 101px;
+		height: 77px;
+	}
+
+	.shopBtn {
+		width: 70px;
+		height: 35px;
+		font-size: 16px;
+		line-height: 30px;
+		left: 39%;
+	}
+}

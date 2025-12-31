@@ -1,0 +1,177 @@
+.shop {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.loading,
+.error {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 15px;
+}
+
+.loading span {
+	width: 80px;
+	height: 80px;
+	background: no-repeat url(../assets/loading.png) center / contain;
+	animation: rotate 2s linear infinite;
+}
+
+.loading p {
+	font-size: 20px;
+}
+
+@keyframes rotate {
+	from {transform: rotate(0);}
+	to {transform: rotate(360deg);}
+}
+
+.error span {
+	width: 100px;
+	height: 100px;
+	background: no-repeat url(../assets/error.png) center / contain;
+}
+
+.error p {
+	font-size: 20px;
+}
+
+.categories {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	row-gap: 15px;
+	padding: 25px;
+}
+
+.buttons {
+	text-align: center;
+	line-height: 2;
+}
+
+.button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 0 5px;
+}
+
+.button:hover {
+	text-decoration: underline;
+}
+
+.searchWrapper {
+	position: relative;
+}
+
+.input {
+	outline: none;
+	font-size: 16px;
+	height: 30px;
+	border-radius: 15px;
+	border: 1px solid black;
+	padding: 0 10px;
+}
+
+.searchIcon {
+	background: no-repeat url(../assets/search.png) center / contain;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 4px;
+	right: 14px;
+}
+
+.input:focus + .searchIcon,
+.input:focus::placeholder {
+	opacity: 0;
+}
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	row-gap: 30px;
+	column-gap: 30px;
+}
+
+.product {
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	position: relative;
+	transition: 0.3s;
+	background: radial-gradient(white 50%, #FAFAD2);
+}
+
+.product:hover {
+	box-shadow: 0 0 10px black;
+	transform: scale(1.03);
+}
+
+.img {
+	width: 200px;
+	height: 200px;
+	object-fit: contain;
+}
+
+.price {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.rating {
+	position: absolute;
+	top: 15px;
+	right: 25px;
+}
+
+.rating::before {
+	content: url(../assets/star.png);
+	position: relative;
+	top: 4px;
+	left: -4px;
+}
+
+.active {
+	color: darkgoldenrod;
+	font-weight: 700;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/* =============================Media Queries============================= */
+
+@media (max-width: 640px) {
+	.product {
+		width: 400px;
+	}
+}
+
+@media (max-width: 520px) {
+	.product {
+		width: 300px;
+	}
+
+	.img {
+		width: 150px;
+		height: 150px;
+	}
+}
