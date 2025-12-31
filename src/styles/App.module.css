@@ -137,9 +137,9 @@
 	content: "";
 	position: absolute;
 	left: 0;
-	top: 22px;
+	top: 23px;
 	width: 1px;
-	height: 171px;
+	height: 168px;
 	background-color: black;
 }
 
@@ -147,9 +147,9 @@
 	content: "";
 	position: absolute;
 	right: 0;
-	top: 22px;
+	top: 23px;
 	width: 1px;
-	height: 171px;
+	height: 168px;
 	background-color: black;
 }
 
